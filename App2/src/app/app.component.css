@@ -1,0 +1,12 @@
+nav
+{
+    background-color: aquamarine;
+}
+
+.selectedroute
+{
+    color: blue;
+    background-color: black;
+    font-size: 22px;
+    display: inline-block;
+}

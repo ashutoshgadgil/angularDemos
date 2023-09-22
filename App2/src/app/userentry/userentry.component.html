@@ -1,0 +1,27 @@
+<h1 style="text-align: center;color: blue;">User Registration</h1>
+
+<form #formdata="ngForm" (ngSubmit)="registerUser(formdata.value)">
+    <div class="container container-fluid">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>Enter Username</td>
+                <td><input type="text" name="username" ngModel></td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td><input type="password" name="pw1" ngModel></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="pw2" ngModel></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Register</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 [ngClass]="PW_valid ? {pwmatch:true} : {pwmismatch:true}">{{message}}</h4>
+    </div>
+</form>
