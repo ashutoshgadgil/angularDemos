@@ -1,12 +1,21 @@
 nav
 {
-    background-color: aquamarine;
+    background-color: antiquewhite;
+
 }
 
 .selectedroute
 {
-    color: blue;
-    background-color: black;
+    color: white;
+    background-color: navy;
     font-size: 22px;
     display: inline-block;
+}
+
+a
+{
+   padding-left: 10px;
+   padding-right: 10px;  
+   border-radius: 10px;
+   text-decoration: none;
 }
