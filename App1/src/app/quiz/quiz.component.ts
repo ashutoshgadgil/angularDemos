@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  selector: 'app-quiz',
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.css']
 })
-export class EmployeeComponent {
+export class QuizComponent {
 
   questions=[
     {"question":"Which is the capital of India?","answer":"New Delhi"},
@@ -18,17 +18,7 @@ export class EmployeeComponent {
 
   questionSelected:string='';
 
-  no=[1,2,3,4,5];
-  cities=["Delhi","Mumbai","Chennai"];
-  citySelected:string='';
-
   answerGiven:string='';
-
-  employees=[
-    {"empNo":101,"empName":"Sachin","empSalary":20000},
-    {"empNo":102,"empName":"Rahul","empSalary":30000},
-    {"empNo":103,"empName":"Rohit","empSalary":40000}
-  ]
 
   checkAns()
   {
@@ -37,5 +27,4 @@ export class EmployeeComponent {
     else
       this.answerGiven="Incorrect Answer";
   }
-
 }

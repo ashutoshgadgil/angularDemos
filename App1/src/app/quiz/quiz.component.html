@@ -1,0 +1,28 @@
+Select your Question <select [(ngModel)]="answerSelected">
+    <option *ngFor="let q of questions" value="{{q.answer}}">{{q.question}}</option>
+</select>
+
+<div [ngSwitch]="answerSelected">
+    <div *ngSwitchCase="'New Delhi'">
+        <ol>
+            <li>New Delhi</li>
+            <li>Mumbai</li>
+            <li>Kolkata</li>
+            <li>Chennai</li>
+        </ol>
+    </div>
+
+    <div *ngSwitchCase="'Mumbai'">
+        <ol>
+            <li>New Delhi</li>
+            <li>Mumbai</li>
+            <li>Kolkata</li>
+            <li>Chennai</li>
+        </ol>
+    </div>
+</div>
+
+Enter Answer<input type="text" [(ngModel)]="answerEntered">
+<h3 [ngStyle]="answerGiven=='Correct Answer'?{'color':'green'}:{'color':'red'}">{{answerGiven}}</h3>
+<button (click)="checkAns()">Check Answer</button>
+

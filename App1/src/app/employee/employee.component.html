@@ -1,6 +1,6 @@
 <h2>Employee Details</h2>
 <table border="1">
-    <thead>
+    <thead appMydir>
         <th>Employee Id</th>
         <th>Employee Name</th>
         <th>Employee Salary</th>
@@ -13,3 +13,48 @@
         </tr>
     </tbody>
 </table>
+
+<select [(ngModel)]="citySelected">
+    <option *ngFor="let cy of cities">{{cy}}</option>
+</select>
+<h3>Selected City : {{citySelected}}</h3>
+
+<div [ngSwitch]="citySelected">
+    <div *ngSwitchCase="'Delhi'">Delhi is the capital of India</div>
+    <div *ngSwitchCase="'Mumbai'">Mumbai is the capital of Maharashtra</div>
+    <div *ngSwitchCase="'Chennai'">Chennai is the capital of Tamilnadu</div>
+</div>
+
+
+<!-- Select your Question <select [(ngModel)]="answerSelected">
+    <option *ngFor="let q of questions" value="{{q.answer}}">{{q.question}}</option>
+</select>
+
+<div [ngSwitch]="answerSelected">
+    <div *ngSwitchCase="'New Delhi'">
+        <ol>
+            <li>New Delhi</li>
+            <li>Mumbai</li>
+            <li>Kolkata</li>
+            <li>Chennai</li>
+        </ol>
+    </div>
+
+    <div *ngSwitchCase="'Mumbai'">
+        <ol>
+            <li>New Delhi</li>
+            <li>Mumbai</li>
+            <li>Kolkata</li>
+            <li>Chennai</li>
+        </ol>
+    </div>
+</div>
+
+Enter Answer<input type="text" [(ngModel)]="answerEntered">
+<h3 [ngStyle]="answerGiven=='Correct Answer'?{'color':'green'}:{'color':'red'}">{{answerGiven}}</h3>
+<button (click)="checkAns()">Check Answer</button>
+ -->
+
+ <div *ngFor="let n of no">
+ <app-quiz></app-quiz>
+ </div>
