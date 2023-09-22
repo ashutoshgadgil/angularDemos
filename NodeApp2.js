@@ -82,6 +82,22 @@ app.get("/showUsers",(req,res)=>{
     //res.end();
 })
 
+
+app.delete("/deleteUser",(req,res)=>{
+    mongoose.connect("mongodb://127.0.0.1:27017/mydb",(err,conn)=>{
+        if(err)
+        {
+            console.log("Error connecting database");
+        }
+        else
+        {
+            console.log("Connection Successful..");
+            console.log("User deleted");
+            //usermodel.findOneAndDelete()
+        }
+    })
+})
+
 app.listen(3000,()=>{
     console.log("Server started...");
 })

@@ -11,6 +11,7 @@ import { UsersComponent } from './users/users.component';
 import { UserentryComponent } from './userentry/userentry.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeDetailComponent,
     NotfoundComponent,
     UsersComponent,
-    UserentryComponent
+    UserentryComponent,
+    DeleteuserComponent
   ],
   imports: [
     BrowserModule,

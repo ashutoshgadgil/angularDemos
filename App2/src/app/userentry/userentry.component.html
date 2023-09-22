@@ -1,4 +1,4 @@
-<h1 style="text-align: center;color: blue;">User Registration</h1>
+<h1 style="text-align: center;color: blue;">User Registration </h1>
 
 <form #formdata="ngForm" (ngSubmit)="registerUser(formdata.value)">
     <div class="container container-fluid">
@@ -6,7 +6,11 @@
         <tbody>
             <tr>
                 <td>Enter Username</td>
-                <td><input type="text" name="username" ngModel></td>
+                <td><input type="text" name="username" ngModel #nameref="ngModel" required>
+                <span style="color: red;" *ngIf="nameref.touched && nameref.invalid">
+                    Username can not be blank
+                </span>
+                </td>
             </tr>
             <tr>
                 <td>Enter Password</td>
