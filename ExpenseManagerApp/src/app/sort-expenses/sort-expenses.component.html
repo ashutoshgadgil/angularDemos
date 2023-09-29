@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="expenseDetails" (ngSubmit)="showDetails()">
+        <table>
+            
+            <tr>
+                <td>Select Start Date</td>
+                <td><input type="date" formControlName="startDate"></td>
+            </tr>
+
+            <tr>
+                <td>Select Start Date</td>
+                <td><input type="date" formControlName="endDate"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button>Show Expenses</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <div class="container">
+          <table class="table table-bordered">
+            <thead style="background-color: cyan;font-size: 22px;color: saddlebrown;">
+                <th>Expense Date</th>
+                <th>House Rent</th>
+                <th>Electricity Bill</th>
+                <th>Food Bill</th>
+                <th>Travel Amount</th>
+                <th>Other Amount</th>
+                <th>Total Expenses of the day</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ex of selectedExpenses">
+                    <td>{{ex.todayDate | date}}</td>
+                    <td>{{ex.houseRent}}</td>
+                    <td>{{ex.electricBill}}</td>
+                    <td>{{ex.foodBill}}</td>
+                    <td>{{ex.travelAmount}}</td>
+                    <td>{{ex.otherAmount}}</td>
+                    <td>{{ex.expenseDay | currency:'INR'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

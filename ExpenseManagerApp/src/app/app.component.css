@@ -1,0 +1,23 @@
+nav
+{
+    background-color: darkmagenta;
+    height: 45px;
+}
+
+a
+{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: brown;
+    border: 2px;
+    color: azure;
+    padding: 5px;
+}
+
+.selectedroute
+{
+    background-color: bisque;
+    color: black;
+    font-size: 25px;
+}

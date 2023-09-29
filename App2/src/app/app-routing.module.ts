@@ -6,6 +6,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { UsersComponent } from './users/users.component';
 import { UserentryComponent } from './userentry/userentry.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { TaxCalculatorComponent } from './tax-calculator/tax-calculator.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'users',component:UsersComponent},
   {path:'userentry',component:UserentryComponent},
   {path:'deleteuser',component:DeleteuserComponent},
+  {path:'taxcalculator',component:TaxCalculatorComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'**',component:NotfoundComponent}
 ];

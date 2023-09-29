@@ -1,0 +1,52 @@
+
+<div class="container">
+<form #expenseData="ngForm" (ngSubmit)="saveExpense(expenseData.value)">
+<div>
+<table class="table table-bordered mx-auto w-auto">
+    <caption class="caption-top" style="text-align: center;font-size: 25px;color: red;">Add Expenses</caption>
+    <tbody>
+        <tr>
+            <td>House Rent</td>
+            <td><input name="hRent" ngModel #houseref="ngModel" required>
+            <p *ngIf="houseref.touched && houseref.invalid" style="color: red;">
+                Field can not be empty
+            </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Electricity Bill</td>
+            <td><input name="ebill" ngModel></td>
+        </tr>
+        <tr>
+            <td>Food Amount</td>
+            <td><input name="foodAmt" ngModel></td>
+        </tr>
+        <tr>
+            <td>Travel Cost</td>
+            <td><input name="tCost" ngModel></td>
+        </tr>
+        <tr>
+            <td>Other Expenses</td>
+            <td><input name="otherExpenses" ngModel></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td><input type="date" name="today" ngModel></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class="btn btn-danger">Save Expenses</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</form>
+<div>
+<img src="../assets/expense.jpg">
+</div>
+</div>
+
+<div *ngIf="insertExp">
+    <h3 style="color: green;text-align: center;">Expense Saved successfully</h3>
+</div>
+

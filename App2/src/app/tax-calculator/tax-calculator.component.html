@@ -1,0 +1,54 @@
+<div>
+    <form #formdata="ngForm" (ngSubmit)="calculateTax(formdata.value)">
+    <table class="table table-bordered mx-auto w-75" >
+        <caption class="caption caption-top" style="text-align: center;color: navy;font-size: 22px;">Tax Calculator</caption>
+
+        <tbody>
+            <tr>
+                <td style="background-color: blue;">Enter Gross Salary</td>
+                <td style="background-color: blue;"><input type="text" name="gross_sal" ngModel></td>
+            </tr>
+            <tr>
+                <td style="background-color: blue;">Enter Basic Salary</td>
+                <td style="background-color: blue;"><input type="text" name="basic_sal" ngModel></td>
+            </tr>
+            <tr>
+                <td style="background-color: blue;">Enter Income from Other Sources</td>
+                <td style="background-color: blue;"><input type="text" name="otherincome_sal" ngModel></td>
+            </tr>
+        
+            <div ngModelGroup="deductions" style="color: red; background-color:yellowgreen;font-size: 15px;">
+                Deductions (80C)
+                <tr>
+                    <td>Enter LIC Amount</td>
+                    <td><input type="text" name="lic_amount" ngModel></td>
+                </tr>
+                <tr>
+                    <td>Enter PPF Amount</td>
+                    <td><input type="text" name="ppf_amount" ngModel></td>
+                </tr>
+                <tr>
+                    <td>Enter Mutual Fund Amount</td>
+                    <td><input type="text" name="mf_amount" ngModel></td>
+                </tr>
+               
+                <tr>
+                    <td>Enter EPF Amount</td>
+                    <td><input type="text" name="epf_amount" ngModel></td>
+                </tr>
+            </div>
+            <tr>
+                <td style="background-color:blueviolet;">Enter Mediclaim Amount (80D)</td>
+                <td style="background-color:blueviolet;"><input type="text" name="mediclaim_amount" ngModel></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-danger">Calculate Tax</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </form>
+
+    <h3>Total Tax : {{Total_tax}}</h3>
+</div>

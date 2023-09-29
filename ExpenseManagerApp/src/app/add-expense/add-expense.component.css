@@ -1,0 +1,26 @@
+table caption
+{
+    font-family: cursive;
+    
+}
+
+td
+{
+    background-color: papayawhip;
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+
+   img
+   {
+    width: 350px;
+    height: 340px;
+   }

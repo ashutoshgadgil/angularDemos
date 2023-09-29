@@ -12,6 +12,7 @@ import { UserentryComponent } from './userentry/userentry.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { TaxCalculatorComponent } from './tax-calculator/tax-calculator.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component';
     NotfoundComponent,
     UsersComponent,
     UserentryComponent,
-    DeleteuserComponent
+    DeleteuserComponent,
+    TaxCalculatorComponent
   ],
   imports: [
     BrowserModule,
